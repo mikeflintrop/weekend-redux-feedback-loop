@@ -40,13 +40,13 @@ function supportFunction () {
                 max={5}
                 onChange={(event) => setNewSupport(event.target.value)}
             />
-        <Button 
-        sx={{m: 2}}
-        variant="outlined"
-        type="submit"
-        disabled={ ( newSupport.length === 0 ) ? true : false }
-        >NEXT</Button>
-        <h6>Please add a value from 1 to 5 before selecting 'NEXT'</h6>
+            <Button 
+            sx={{m: 2}}
+            variant="outlined"
+            type="submit"
+            disabled={ ( newSupport.length === 0 ) ? true : false }
+            >NEXT</Button>
+            <h5>Please add a value from 1 to 5 before selecting 'NEXT'</h5>
         </form>
     )
 }

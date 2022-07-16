@@ -8,6 +8,7 @@
   padding: 20px;
   color: white;
   margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App-title {
@@ -20,16 +21,21 @@
 
 h4 {
   font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 body {
   background: linear-gradient(45deg, yellow, cyan);
 }
 
-input {
+/* input {
   width: 40px;
 }
 
 .comments {
   width: 200px;
-}
+} */
