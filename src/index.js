@@ -34,11 +34,11 @@ const understandingReducer = (state = 0, action) => {
     }
 }
 
-const supportedReducer = (state = 0, action) => {
-    console.log('Supported reducer: ', action)
+const supportReducer = (state = 0, action) => {
+    console.log('Support reducer: ', action)
     switch (action.type) {
-        case 'ADD_SUPPORTED':
-        console.log('You clicked ADD_SUPPORTED', action.payload);
+        case 'ADD_SUPPORT':
+        console.log('You clicked ADD_SUPPORT', action.payload);
         return action.payload;
         default: 
         // if action.type is anything else, return last value of state
@@ -75,7 +75,7 @@ const storeInstance = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
-        supportedReducer,
+        supportReducer,
         commentsReducer,
         feedbackReducer
     }),

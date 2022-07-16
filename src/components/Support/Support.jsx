@@ -18,7 +18,7 @@ function supportFunction () {
             payload: newSupport
         });
         history.push('/comments');
-        // setNewFeeling('');
+        // setNewSupport('');
     }
 
     return (

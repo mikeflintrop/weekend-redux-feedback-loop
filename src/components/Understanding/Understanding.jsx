@@ -18,7 +18,7 @@ function understandingFunction () {
             payload: newUnderstanding
         });
         history.push('/support');
-        // setNewFeeling('');
+        // setNewUnderstanding('');
     }
 
     return (
