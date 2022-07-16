@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function thanksFunction () {
 
@@ -33,7 +34,9 @@ function thanksFunction () {
     return (
         <div>
             <h2>Thanks!</h2>
-            <button onClick={handleStartOver}>Leave More Feedback!</button>
+            <Button
+            variant="outlined"
+            onClick={handleStartOver}>Leave More Feedback!</Button>
         </div>
     )
 };

@@ -2,6 +2,7 @@ import react from 'react';
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function feelingFunction () {
 
@@ -32,10 +33,11 @@ function feelingFunction () {
                 max={5}
                 onChange={(event) => setNewFeeling(event.target.value)}
             />
-        <button 
+        <Button 
+        variant="outlined"
         type="submit"
         disabled={ ( newFeeling.length === 0 ) ? true : false }
-        >NEXT</button>
+        >NEXT</Button>
         <h6>Please add a value from 1 to 5 before selecting 'NEXT'</h6>
         </form>
     )

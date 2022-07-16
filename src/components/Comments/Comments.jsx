@@ -2,6 +2,7 @@ import react from 'react';
 import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function commentsFunction () {
 
@@ -24,13 +25,16 @@ function commentsFunction () {
     return (
         <form onSubmit={handleCommentsSubmit}>
             <h2>What additional comments do you have?</h2>
-            <input 
+            <input
+                className="comments"
                 type="text" 
                 placeholder="Comments" 
                 value={newComments}
                 onChange={(event) => setNewComments(event.target.value)}
             />
-        <button type="submit">NEXT</button>
+        <Button 
+        variant="outlined"
+        type="submit">NEXT</Button>
         <h6>Optional to leave comments before selecting 'NEXT'</h6>
         </form>
     )

@@ -22,3 +22,14 @@ h4 {
   font-style: italic;
 }
 
+body {
+  background: linear-gradient(45deg, yellow, cyan);
+}
+
+input {
+  width: 40px;
+}
+
+.comments {
+  width: 200px;
+}

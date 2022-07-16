@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function feedbackFunction () {
 
@@ -41,7 +42,9 @@ function feedbackFunction () {
             <h4>Understanding: {understanding}</h4>
             <h4>Support: {support}</h4>
             <h4>Comments: {comments}</h4>
-            <button onClick={handleFeedbackSubmit}>SUBMIT</button>
+            <Button 
+            variant="outlined"
+            onClick={handleFeedbackSubmit}>SUBMIT</Button>
         </div>
     )
 }
