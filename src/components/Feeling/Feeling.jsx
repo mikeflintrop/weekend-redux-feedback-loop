@@ -41,6 +41,7 @@ function feelingFunction () {
                 onChange={(event) => setNewFeeling(event.target.value)}
             />
         <Button 
+        sx={{m: 2}}
         variant="outlined"
         type="submit"
         disabled={ ( newFeeling.length === 0 ) ? true : false }

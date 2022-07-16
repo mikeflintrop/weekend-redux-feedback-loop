@@ -40,6 +40,7 @@ function commentsFunction () {
                 onChange={(event) => setNewComments(event.target.value)}
             />
         <Button 
+        sx={{m: 2}}
         variant="outlined"
         type="submit">NEXT</Button>
         <h6>Optional to leave comments before selecting 'NEXT'</h6>

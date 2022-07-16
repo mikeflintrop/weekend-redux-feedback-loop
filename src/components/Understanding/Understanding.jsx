@@ -41,6 +41,7 @@ function understandingFunction () {
                 onChange={(event) => setNewUnderstanding(event.target.value)}
             />
         <Button 
+        sx={{m: 2}}
         variant="outlined"
         type="submit"
         disabled={ ( newUnderstanding.length === 0 ) ? true : false }

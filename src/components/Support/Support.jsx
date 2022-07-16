@@ -41,6 +41,7 @@ function supportFunction () {
                 onChange={(event) => setNewSupport(event.target.value)}
             />
         <Button 
+        sx={{m: 2}}
         variant="outlined"
         type="submit"
         disabled={ ( newSupport.length === 0 ) ? true : false }
