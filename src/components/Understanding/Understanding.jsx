@@ -23,6 +23,7 @@ function understandingFunction () {
 
     return (
         <form onSubmit={handleUnderstandingSubmit}>
+            <h2>How are you understanding today's content?</h2>
             <input 
                 type="number" 
                 placeholder="1-5"

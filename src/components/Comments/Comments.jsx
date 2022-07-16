@@ -1,6 +1,6 @@
 import react from 'react';
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function commentsFunction () {
@@ -23,6 +23,7 @@ function commentsFunction () {
 
     return (
         <form onSubmit={handleCommentsSubmit}>
+            <h2>What additional comments do you have?</h2>
             <input 
                 type="text" 
                 placeholder="Comments" 

@@ -23,6 +23,7 @@ function supportFunction () {
 
     return (
         <form onSubmit={handleSupportSubmit}>
+            <h2>How supported do you feel with today's content?</h2>
             <input 
                 type="number" 
                 placeholder="1-5"

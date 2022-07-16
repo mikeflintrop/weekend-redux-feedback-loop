@@ -1,6 +1,6 @@
 import react from 'react';
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function feelingFunction () {
@@ -23,6 +23,7 @@ function feelingFunction () {
 
     return (
         <form onSubmit={handleFeelingSubmit}>
+            <h2>How are you feeling today?</h2>
             <input 
                 type="number" 
                 placeholder="1-5"
