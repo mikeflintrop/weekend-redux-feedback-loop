@@ -31,6 +31,7 @@ function commentsFunction () {
                 onChange={(event) => setNewComments(event.target.value)}
             />
         <button type="submit">NEXT</button>
+        <h6>Optional to leave comments before selecting 'NEXT'</h6>
         </form>
     )
 }

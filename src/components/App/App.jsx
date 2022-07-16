@@ -17,8 +17,8 @@ function App() {
     <Router>
     <div className='App'>
       <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
+        <h1 className='App-title'>We ❤️ Feedback</h1>
+        <h4>We love to hear how you are doing!</h4>
       </header>
       <Route  path="/" exact>
             <Feeling />

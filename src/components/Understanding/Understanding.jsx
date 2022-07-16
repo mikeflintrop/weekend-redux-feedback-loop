@@ -23,7 +23,7 @@ function understandingFunction () {
 
     return (
         <form onSubmit={handleUnderstandingSubmit}>
-            <h2>How are you understanding today's content?</h2>
+            <h2>How well are you understanding today's content?</h2>
             <input 
                 type="number" 
                 placeholder="1-5"
@@ -32,7 +32,11 @@ function understandingFunction () {
                 max={5}
                 onChange={(event) => setNewUnderstanding(event.target.value)}
             />
-        <button type="submit">NEXT</button>
+        <button 
+        type="submit"
+        disabled={ ( newUnderstanding.length === 0 ) ? true : false }
+        >NEXT</button>
+        <h6>Please add a value from 1 to 5 before selecting 'NEXT'</h6>
         </form>
     )
 }

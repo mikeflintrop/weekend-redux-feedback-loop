@@ -1,24 +1,35 @@
 import react from 'react';
+import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function feedbackFunction () {
 
-    const feeling = useSelector(store => store.feeling)
-    const understanding = useSelector(store => store.understanding)
-    const support = useSelector(store => store.support)
-    const comments = useSelector(store => store.comments)
+    const feeling = useSelector(store => store.feelingReducer)
+    const understanding = useSelector(store => store.understandingReducer)
+    const support = useSelector(store => store.supportReducer)
+    const comments = useSelector(store => store.commentsReducer)
 
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const handleFeedbackSubmit = (event) => {
-        event.preventDefault();
+    const handleFeedbackSubmit = () => {
+        // event.preventDefault();
 
-        dispatch({
-            type: 'ADD_FEEDBACK',
-            payload: {feeling, understanding, support, comments}
+        axios({
+            method: 'POST',
+            url: '/feedback',
+            data: {
+                feeling: feeling, 
+                understanding: understanding, 
+                support: support, 
+                comments: comments
+            }
+        }).then((response) => {
+            console.log( 'POST succeeded', response)
+        }).catch((error) => {
+            console.log('Post failed', error);
         });
         history.push('/thanks');
     }
@@ -26,15 +37,11 @@ function feedbackFunction () {
     return (
         <div>
             <h2>Review Your Feedback</h2>
-            <table>
-                <thead>
-
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-            <button onClick={(event) => handleFeedbackSubmit}>SUBMIT</button>
+            <h4>Feeling: {feeling}</h4>
+            <h4>Understanding: {understanding}</h4>
+            <h4>Support: {support}</h4>
+            <h4>Comments: {comments}</h4>
+            <button onClick={handleFeedbackSubmit}>SUBMIT</button>
         </div>
     )
 }

@@ -32,7 +32,11 @@ function feelingFunction () {
                 max={5}
                 onChange={(event) => setNewFeeling(event.target.value)}
             />
-        <button type="submit">NEXT</button>
+        <button 
+        type="submit"
+        disabled={ ( newFeeling.length === 0 ) ? true : false }
+        >NEXT</button>
+        <h6>Please add a value from 1 to 5 before selecting 'NEXT'</h6>
         </form>
     )
 }
