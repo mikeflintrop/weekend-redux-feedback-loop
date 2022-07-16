@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function commentsFunction () {
 
@@ -25,7 +26,13 @@ function commentsFunction () {
     return (
         <form onSubmit={handleCommentsSubmit}>
             <h2>What additional comments do you have?</h2>
-            <input
+            <TextField
+                // required
+                sx={{width: 300}}
+                // id="filled-required"
+                label="Optional"
+                // defaultValue="Comments"
+                variant="filled"
                 className="comments"
                 type="text" 
                 placeholder="Comments" 

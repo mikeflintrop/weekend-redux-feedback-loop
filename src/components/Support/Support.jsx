@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function supportFunction () {
 
@@ -25,8 +26,14 @@ function supportFunction () {
     return (
         <form onSubmit={handleSupportSubmit}>
             <h2>How supported do you feel with today's content?</h2>
-            <input 
-                type="number" 
+            <TextField
+                sx={{width: 100}}
+                id="filled-number"
+                label="Number"
+                type="number"
+                InputLabelProps={{shrink: true}}
+                InputProps={{ inputProps: { min: 1, max: 5 } }}
+                variant="filled"
                 placeholder="1-5"
                 value={newSupport}
                 min={1}

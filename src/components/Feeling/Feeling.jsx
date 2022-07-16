@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function feelingFunction () {
 
@@ -25,8 +26,14 @@ function feelingFunction () {
     return (
         <form onSubmit={handleFeelingSubmit}>
             <h2>How are you feeling today?</h2>
-            <input 
-                type="number" 
+            <TextField
+                sx={{width: 100}}
+                id="filled-number"
+                label="Number"
+                type="number"
+                InputLabelProps={{shrink: true}}
+                InputProps={{ inputProps: { min: 1, max: 5 } }}
+                variant="filled"
                 placeholder="1-5"
                 value={newFeeling}
                 min={1}
