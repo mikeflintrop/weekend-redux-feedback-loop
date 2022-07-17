@@ -76,7 +76,10 @@ function adminFunction () {
             <h2>ADMIN INFO</h2>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="caption table">
-                    <caption>* You can remove Feedback by clicking the 'Remove' Button</caption>
+                    <caption>* Remove Feedback by clicking the 'Remove' Button
+                        < br />
+                        * Clicking the 'GO BACK' button will return you to the beginning of the feedback form
+                    </caption>
                     <TableHead>
                     <TableRow>
                         <TableCell align="center">ID</TableCell>
