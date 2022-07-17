@@ -23,9 +23,20 @@ function commentsFunction () {
         // setNewComments('');
     }
 
+    const handleGoBack = (event) => {
+        event.preventDefault();
+        history.push('/support');
+    }
+
     return (
         <form onSubmit={handleCommentsSubmit}>
             <h2>What additional comments do you have?</h2>
+            <Button 
+            sx={{m: 2}}
+            variant="outlined"
+            onClick={handleGoBack}
+            >GO BACK</Button>
+
             <TextField
                 // required
                 sx={{width: 300}}

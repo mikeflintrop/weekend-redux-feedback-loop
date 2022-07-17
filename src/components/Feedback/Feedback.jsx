@@ -35,6 +35,11 @@ function feedbackFunction () {
         history.push('/thanks');
     }
 
+    const handleGoBack = (event) => {
+        event.preventDefault();
+        history.push('/comments');
+    }
+
     return (
         <div>
             <h2>Review Your Feedback</h2>
@@ -42,6 +47,13 @@ function feedbackFunction () {
             <h4>Understanding: {understanding}</h4>
             <h4>Support: {support}</h4>
             <h4>Comments: {comments}</h4>
+
+            <Button 
+            sx={{m: 2}}
+            variant="outlined"
+            onClick={handleGoBack}
+            >GO BACK</Button>
+
             <Button 
             variant="outlined"
             onClick={handleFeedbackSubmit}>SUBMIT</Button>

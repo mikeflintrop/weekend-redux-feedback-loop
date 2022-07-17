@@ -23,9 +23,20 @@ function understandingFunction () {
         // setNewUnderstanding('');
     }
 
+    const handleGoBack = (event) => {
+        event.preventDefault();
+        history.push('/');
+    }
+
     return (
         <form onSubmit={handleUnderstandingSubmit}>
             <h2>How well are you understanding today's content?</h2>
+            <Button 
+            sx={{m: 2}}
+            variant="outlined"
+            onClick={handleGoBack}
+            >GO BACK</Button>
+
             <TextField
                 sx={{width: 100}}
                 id="filled-number"

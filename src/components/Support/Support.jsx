@@ -23,9 +23,20 @@ function supportFunction () {
         // setNewSupport('');
     }
 
+    const handleGoBack = (event) => {
+        event.preventDefault();
+        history.push('/understanding');
+    }
+
     return (
         <form onSubmit={handleSupportSubmit}>
             <h2>How supported do you feel with today's content?</h2>
+            <Button 
+            sx={{m: 2}}
+            variant="outlined"
+            onClick={handleGoBack}
+            >GO BACK</Button>
+
             <TextField
                 sx={{width: 100}}
                 id="filled-number"
