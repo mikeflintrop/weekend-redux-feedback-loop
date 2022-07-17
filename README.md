@@ -10,7 +10,7 @@ This application allows you to enter feedback and interact with each page. Once 
 
 ## Screen Shot
 
-N/A
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 ### Prerequisites
 
