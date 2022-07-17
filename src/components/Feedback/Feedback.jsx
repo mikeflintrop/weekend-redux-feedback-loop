@@ -55,6 +55,7 @@ function feedbackFunction () {
             >GO BACK</Button>
 
             <Button 
+            sx={{m: 2}}
             variant="outlined"
             onClick={handleFeedbackSubmit}>SUBMIT</Button>
         </div>

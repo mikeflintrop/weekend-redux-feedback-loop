@@ -8,6 +8,7 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Feedback from '../Feedback/Feedback';
 import Thanks from '../Thanks/Thanks';
+import Admin from '../Admin/Admin';
 
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -20,28 +21,32 @@ function App() {
         <h1 className='App-title'>We ❤️ Feedback</h1>
         <h4>We love to hear how you are doing!</h4>
       </header>
-      <Route  path="/" exact>
+          <Route  path="/" exact>
             <Feeling />
           </Route>
 
-          <Route exact path="/understanding">            
+          <Route path="/understanding" exact>            
             <Understanding />
           </Route>
 
-          <Route exact path="/support">            
+          <Route path="/support" exact>            
             <Support />
           </Route>
 
-          <Route exact path="/comments">            
+          <Route path="/comments" exact>            
             <Comments />
           </Route>
 
-          <Route exact path="/feedback">            
+          <Route path="/feedback" exact>            
             <Feedback />
           </Route>
 
-          <Route exact path="/thanks">            
+          <Route path="/thanks" exact>            
             <Thanks />
+          </Route>
+
+          <Route path="/admin" exact>            
+            <Admin />
           </Route>
 
     </div>
