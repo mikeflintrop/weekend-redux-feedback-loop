@@ -15,7 +15,7 @@ router.post('/',  (req, res) => {
         res.sendStatus(201);
     })
     .catch(error => {
-        console.log(`Error POSTing feedback: ${error}`, error);
+        console.log(`Error POSTing feedback:`, error);
         res.sendStatus(500);
     });
 });
@@ -23,15 +23,32 @@ router.post('/',  (req, res) => {
 // GET request
 router.get('/', (req, res) => {
     // GET feedback
-    let queryText = `SELECT * FROM feedback`;
+    let queryText = `SELECT * FROM feedback ORDER BY "id" DESC;`;
     pool.query(queryText)
     .then(result => {
         res.send(result.rows);
     })
     .catch(error => {
-        console.log(`Error GETting feedback:${error}`, error);
+        console.log(`Error GETting feedback:`, error);
         res.sendStatus(500);
     });
 });
+
+// DELETE request
+router.delete('/:id', (req, res) => {
+    console.log('DELETEing feedback:', req.params.id);
+    let id = req.params.id
+    const queryText = `DELETE FROM feedback WHERE id = $1;`;
+
+    pool.query(queryText, [id])
+    .then((result) => {
+        res.sendStatus(200);
+    })
+    .catch((error) => {
+        console.log('Error DELETEing feedback', error);
+        res.sendStatus(500);
+    });
+});
+
 
 module.exports = router;

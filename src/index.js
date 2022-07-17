@@ -58,17 +58,22 @@ const commentsReducer = (state = 0, action) => {
     }
 }
 
-// const feedbackReducer = (state = 0, action) => {
-//     console.log('Feedback reducer: ', action)
-//     switch (action.type) {
-//         case 'ADD_FEEDBACK':
-//         console.log('You clicked ADD_FEEDBACK', action.payload);
-//         return action.payload;
-//         default: 
-//         // if action.type is anything else, return last value of state
-//         return state;
-//     }
-// }
+const feedbackReducer = (state = [], action) => {
+    console.log('Feedback reducer: ', action)
+    switch (action.type) {
+        case 'GET_FEEDBACK':
+        console.log('You clicked GET_FEEDBACK', action.payload);
+        return action.payload;
+
+        case 'REMOVE_FEEDBACK':
+        console.log('You clicked REMOVE_FEEDBACK', action.payload);
+        return action.payload;
+
+        default: 
+        // if action.type is anything else, return last value of state
+        return state;
+    }
+}
 
 // Sore
 const storeInstance = createStore(
@@ -77,7 +82,7 @@ const storeInstance = createStore(
         understandingReducer,
         supportReducer,
         commentsReducer,
-        // feedbackReducer
+        feedbackReducer
     }),
     applyMiddleware(logger)
 );
