@@ -11,10 +11,19 @@ import Thanks from '../Thanks/Thanks';
 import Admin from '../Admin/Admin';
 
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
 
 function App() {
 
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
+
   return (
+    
     <Router>
     <div className='App'>
       <header className='App-header'>
@@ -45,12 +54,14 @@ function App() {
             <Thanks />
           </Route>
 
+          <ThemeProvider theme={darkTheme}>
           <Route path="/admin" exact>            
             <Admin />
           </Route>
-
+          </ThemeProvider>
     </div>
     </Router>
+    
   );
 }
 
