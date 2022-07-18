@@ -64,10 +64,10 @@ const feedbackReducer = (state = [], action) => {
         case 'GET_FEEDBACK':
         console.log('You clicked GET_FEEDBACK', action.payload);
         return action.payload;
-
-        case 'REMOVE_FEEDBACK':
-        console.log('You clicked REMOVE_FEEDBACK', action.payload);
-        return action.payload;
+// didn't actually need this
+        // case 'REMOVE_FEEDBACK':
+        // console.log('You clicked REMOVE_FEEDBACK', action.payload);
+        // return action.payload;
 
         default: 
         // if action.type is anything else, return last value of state

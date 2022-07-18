@@ -55,10 +55,11 @@ function adminFunction () {
             url: `/feedback/${id}`
         }).then((response) => {
         // console.log('success in DELETEing feedback', response );
-            dispatch({
-                type: 'REMOVE_FEEDBACK', 
-                payload: response.data
-            })
+        // didn't need this
+            // dispatch({
+            //     type: 'REMOVE_FEEDBACK', 
+            //     payload: response.data
+            // })
             getFeedback();
         }).catch((error) => {
             console.log('error in DELETEing feedback', error);
